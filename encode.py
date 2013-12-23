@@ -10,8 +10,9 @@ import Image
 
 
 class Message(object):
-    def __init__(self, text):
+    def __init__(self, text, file_name):
         self.text = text
+        self.file_name = file_name
         self.text_hex = None
         self.aspect = 4/3
         self.width = None
@@ -97,9 +98,14 @@ class Message(object):
         for n, triad in enumerate(zip(R, G, B)):
             x, y = self._position(n)
             pixels[x, y] = tuple(triad)
-        image.save('encoded.png')
+        image.save(self.file_name + ".png")
 
 
 if __name__ == "__main__":
-    message = Message(sys.argv[1])
+    text = sys.argv[1]
+    if len(sys.argv) == 2:
+        file_name = "encoded"
+    else:
+        file_name = sys.argv[2]
+    message = Message(text, file_name)
     message.make_image()
