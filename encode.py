@@ -19,15 +19,20 @@ class Message(object):
         self.height = None
 
     def _triads(self, text):
+        """Triads generator. Need a text string. 
+        Return a list of triads elements"""
         triads = list(self._split(text, 3))
         triads[-1] = triads[-1].ljust(3, " ")
         return triads
 
     def _split(self, text, size):
+        """Text string splitter. Need a text string and a wize splitter"""
         for start in xrange(0, len(text), size):
             yield text[start:start + size]
 
     def _lines(self, text):
+        """Three new text string generator. Need a text string.
+        Return three new text string from the text string"""
         triads = self._triads(text)
         r = []
         g = []
@@ -39,6 +44,8 @@ class Message(object):
         return r, g, b
 
     def _interlaced_basic(self, pi, rho):
+        """Lists interleaver. Need two list.
+        Return """
         pirho = []
         for p, r in zip(pi, rho):
             pirho.append(p)
