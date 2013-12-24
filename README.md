@@ -11,19 +11,23 @@ message Encocoder is needed to decode the image.
 Getting started
 ---------------
 
-If you just want to encode a message, run:   
+If you just want to encode a message, run:
+
 	encode.py "message to encode" "the resulting image name"
 
-If you just want to decode a message, run:   
+If you just want to decode a message, run:
+
 	decode.py "name of the image encoded"
 
 Example
 -------
 
-Encode a message:   
+Encode a message:
+
 	encode.py "I just need write a message to encode here" image_encoded
 
-Decode a message:   
+Decode a message:
+
 	decode.py image_encoded
 
 Contact
