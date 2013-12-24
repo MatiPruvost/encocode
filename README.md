@@ -6,7 +6,7 @@ Introduction
 
 Encocode is a easy and funny encoder and decoder. Encocode can encode a message and 
 tranform it in a image, therefore, the message is into the image. To retrieve the 
-message Encocoder is needed to decode the image. 
+message Encocode is needed to decode the image. 
 
 Getting started
 ---------------
