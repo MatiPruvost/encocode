@@ -28,7 +28,7 @@ Encode a message:
 
 Decode a message:
 
-	decode.py image_encoded
+	decode.py image_encoded.png
 
 Contact
 -------
